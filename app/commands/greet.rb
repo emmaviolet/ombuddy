@@ -1,6 +1,6 @@
 module Ombuddy
 	module Commands
-		INTRODUCTION_TEXT = "Hello! I'm Ombuddy. I'm here to help you manage and resolve workplace issues. How can I help today?"
+		INTRODUCTION_TEXT = "Hello! I'm Ombuddy. I'm here to help address your HR concerns. How can I help today?"
 
 		ATTACHMENTS = [
         {
