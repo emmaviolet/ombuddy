@@ -1,9 +1,12 @@
 require 'sinatra/base'
+require 'json' 
 
 module Ombuddy
 	class Web < Sinatra::Base
-		post '/' do
-			Ombuddy::Services::StartReportingProcess.call(params)
+		include SlackRubyBot::Loggable
+		post '/api/slack/actions' do
+      content_type :json
+			Ombuddy::Services::SelectAction.call(params).to_json
 		end
 	end
 end

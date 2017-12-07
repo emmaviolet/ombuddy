@@ -6,6 +6,10 @@ gem 'sinatra'
 gem 'dotenv'
 gem 'celluloid-io'
 
+gem 'grape'
+gem 'roar'
+gem 'grape-roar'
+
 group :development, :test do
   gem 'rake'
   gem 'foreman'
