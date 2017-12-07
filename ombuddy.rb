@@ -1,4 +1,5 @@
 require 'slack-ruby-bot'
 require 'app/commands/greet'
 require 'app/commands/view_guidelines'
+require 'app/services/start_reporting_process'
 require 'app/bot'

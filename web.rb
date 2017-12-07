@@ -1,13 +1,9 @@
 require 'sinatra/base'
 
 module Ombuddy
-  class Web < Sinatra::Base
-    get '/' do
-      'Reporting is good for you.'
-    end
-
-    post '/' do
-    	200
-    end
-  end
+	class Web < Sinatra::Base
+		post '/' do
+			Ombuddy::Services::StartReportingProcess.call(params)
+		end
+	end
 end
