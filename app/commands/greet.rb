@@ -1,7 +1,6 @@
 module Ombuddy
 	module Commands
 		INTRODUCTION_TEXT = "Hi! Are you here to report something, or would you like some advice?"
-
 		ATTACHMENTS = [
       {
         "fallback": "You are unable to select an option",
@@ -18,7 +17,7 @@ module Ombuddy
             "name": "action",
             "text": "Get some advice",
             "type": "button",
-            "value": "guidelines"
+            "value": "guidance"
           }
         ]
       }
