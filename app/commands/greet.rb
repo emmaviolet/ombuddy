@@ -6,21 +6,21 @@ module Ombuddy
                         "like some advice?"
     ATTACHMENTS = [
       {
-        "fallback": "You are unable to select an option",
-        "callback_id": "action_selection",
-        "attachment_type": "default",
-        "actions": [
+        fallback: "You are unable to select an option",
+        callback_id: "action_selection",
+        attachment_type: "default",
+        actions: [
           {
-            "name": "action",
-            "text": "Create a report",
-            "type": "button",
-            "value": "report"
+            name: "action",
+            text: "Create a report",
+            type: "button",
+            value: "report"
           },
           {
-            "name": "action",
-            "text": "Get some advice",
-            "type": "button",
-            "value": "guidance"
+            name: "action",
+            text: "Get some advice",
+            type: "button",
+            value: "guidance"
           }
         ]
       }

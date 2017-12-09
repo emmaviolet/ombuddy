@@ -23,7 +23,7 @@ module Ombuddy
           case button_value
           when "report" then attachments_for_report
           when "guidance" then attachments_for_guidance
-          else attachments_for_unknown
+          else attachments_for_unknown.merge(attachment_type: "default")
           end
         end
 
@@ -34,22 +34,21 @@ module Ombuddy
         def attachments_for_report
           [
             {
-              "attachment_type": "default",
-              "title":   ":writing_hand: You asked to create a report.",
-              "text":    "You'll need to speak to the HR team to make a "\
+              title:   ":writing_hand: You asked to create a report.",
+              text:    "You'll need to speak to the HR team to make a "\
                          "formal report. Can I pass your details onto them?",
-              "actions": [
+              actions: [
                 {
-                  "name": "report_response",
-                  "text": "Yes",
-                  "type": "button",
-                  "value": "yes"
+                  name: "report_response",
+                  text: "Yes",
+                  type: "button",
+                  value: "yes"
                 },
                 {
-                  "name": "report_response",
-                  "text": "No",
-                  "type": "button",
-                  "value": "no"
+                  name: "report_response",
+                  text: "No",
+                  type: "button",
+                  value: "no"
                 }
               ]
             }
@@ -59,32 +58,31 @@ module Ombuddy
         def attachments_for_guidance
           [
             {
-              "attachment_type": "default",
-              "title":   ":speaking_head_in_silhouette: You asked for some "\
+              title:   ":speaking_head_in_silhouette: You asked for some "\
                          "advice.",
-              "text":    "I know about your HR policy and all the support "\
+              text:    "I know about your HR policy and all the support "\
                          "options available. Is any of that helpful?",
-              "actions": [
+              actions: [
                 {
-                  "name": "guidance_response",
-                  "text": "Yes",
-                  "type": "select",
-                  "options": [
+                  name: "guidance_response",
+                  text: "Yes",
+                  type: "select",
+                  options: [
                     {
-                      "text": "Our policies",
-                      "value": "policies"
+                      text: "Our policies",
+                      value: "policies"
                     },
                     {
-                      "text": "Support options",
-                      "value": "support"
+                      text: "Support options",
+                      value: "support"
                     }
                   ]
                 },
                 {
-                  "name": "guidance_response",
-                  "text": "No",
-                  "type": "button",
-                  "value": "no"
+                  name: "guidance_response",
+                  text: "No",
+                  type: "button",
+                  value: "no"
                 }
               ]
             }
@@ -94,22 +92,21 @@ module Ombuddy
         def attachments_for_unknown
           [
             {
-              "attachment_type": "default",
-              "title":   "Hmmm, that doesn't seem to be something I know how "\
+              title:   "Hmmm, that doesn't seem to be something I know how "\
                          "to do.",
-              "text":    "Care to give me some feedback?",
-              "actions": [
+              text:    "Care to give me some feedback?",
+              actions: [
                 {
-                  "name": "unknown_response",
-                  "text": "Yes",
-                  "type": "button",
-                  "value": "yes"
+                  name: "unknown_response",
+                  text: "Yes",
+                  type: "button",
+                  value: "yes"
                 },
                 {
-                  "name": "unknown_response",
-                  "text": "No",
-                  "type": "button",
-                  "value": "no"
+                  name: "unknown_response",
+                  text: "No",
+                  type: "button",
+                  value: "no"
                 }
               ]
             }
