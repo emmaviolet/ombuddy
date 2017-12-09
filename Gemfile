@@ -1,23 +1,28 @@
-source 'https://rubygems.org'
+# frozen_string_literal: true
 
-gem 'slack-ruby-bot'
-gem 'puma'
-gem 'sinatra'
-gem 'dotenv'
-gem 'celluloid-io'
+source "https://rubygems.org"
 
-gem 'grape'
-gem 'roar'
-gem 'grape-roar'
+ruby "2.4.2"
+
+gem "celluloid-io"
+gem "dotenv"
+gem "puma"
+gem "sinatra"
+gem "slack-ruby-bot"
+
+gem "grape"
+gem "grape-roar"
+gem "roar"
 
 group :development, :test do
-  gem 'rake'
-  gem 'foreman'
+  gem "foreman"
+  gem "rake"
 end
 
 group :test do
-  gem 'rspec'
-  gem 'rack-test'
-  gem 'vcr'
-  gem 'webmock'
+  gem "rack-test"
+  gem "rspec"
+  gem "rubocop"
+  gem "vcr"
+  gem "webmock"
 end
