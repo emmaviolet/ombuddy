@@ -1,0 +1,18 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: ruby:2.4
+        environment:
+          RAILS_ENV: test
+    working_directory: ~/ombuddy
+    steps:
+      - checkout
+      - restore_cache:
+          key: ombuddy-deps
+      - run: bundle install --path vendor/bundle
+      - run: bundle exec rubocop
+      - save_cache:
+          key: ombuddy-deps
+          paths:
+            - ~/ombuddy/vendor/bundle
