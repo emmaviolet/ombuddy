@@ -12,7 +12,7 @@ Thread.abort_on_exception = true
 
 Thread.new do
   begin
-    Ombuddy::Bot.run
+    OmbuddyBot::App.instance.run
   rescue Exception => e # rubocop:disable Lint/RescueException
     STDERR.puts "ERROR: #{e}"
     STDERR.puts e.backtrace
@@ -20,4 +20,4 @@ Thread.new do
   end
 end
 
-run Ombuddy::Web
+run OmbuddyBot::Web

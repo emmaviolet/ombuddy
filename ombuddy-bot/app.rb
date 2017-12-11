@@ -2,7 +2,7 @@
 
 require "slack-ruby-bot"
 
-module Ombuddy
-  class Bot < SlackRubyBot::Bot
+module OmbuddyBot
+  class App < SlackRubyBot::App
   end
 end

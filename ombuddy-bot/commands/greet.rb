@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Ombuddy
+module OmbuddyBot
   module Commands
     INTRODUCTION_TEXT = "Hi! Are you here to report something, or would you "\
                         "like some advice?"
