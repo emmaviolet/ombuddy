@@ -32,7 +32,7 @@ module Ombuddy
       command "hello", "hi" do |client, data, _match|
         client.web_client.chat_postMessage(
           channel: data.channel,
-          text: INTRODUCTION_TEXT,
+          text: data.channel.to_s,
           attachments: ATTACHMENTS
         )
       end
