@@ -31,7 +31,7 @@ module Ombuddy
 
       command "hello", "hi" do |client, data, _match|
         client.web_client.chat_postMessage(
-          channel: data.channel,
+          channel: data.channel.members,
           text: data.channel.to_s,
           attachments: ATTACHMENTS
         )
