@@ -82,7 +82,7 @@ GEM
     parser (2.4.0.2)
       ast (~> 2.3)
     powerpack (0.1.1)
-    public_suffix (3.0.1)
+    public_suffix (3.0.2)
     puma (3.11.0)
     rack (2.0.3)
     rack-accept (0.4.5)
@@ -151,7 +151,7 @@ GEM
       coercible (~> 1.0)
       descendants_tracker (~> 0.0, >= 0.0.3)
       equalizer (~> 0.0, >= 0.0.9)
-    webmock (3.1.1)
+    webmock (3.4.1)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
