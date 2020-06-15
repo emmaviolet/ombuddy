@@ -84,7 +84,7 @@ GEM
     powerpack (0.1.1)
     public_suffix (3.0.1)
     puma (3.11.0)
-    rack (2.0.3)
+    rack (2.2.3)
     rack-accept (0.4.5)
       rack (>= 0.4)
     rack-protection (2.0.0)
